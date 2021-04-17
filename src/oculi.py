@@ -108,7 +108,7 @@ def startbackdoor():
     Arch      {Style.BRIGHT}:{Style.RESET_ALL} {platform.machine()}
 
     Hostname  {Style.BRIGHT}:{Style.RESET_ALL} {socket.gethostname()}
-    IP        {Style.BRIGHT}:{Style.RESET_ALL} {socket.gethostbyname(socket.gethostname())}
+    IP        {Style.BRIGHT}:{Style.RESET_ALL} {addr[0]}
     MAC       {Style.BRIGHT}:{Style.RESET_ALL} {':'.join(re.findall('..', '%012x' % uuid.getnode()))}
 
     Processor {Style.BRIGHT}:{Style.RESET_ALL} {platform.processor()}
